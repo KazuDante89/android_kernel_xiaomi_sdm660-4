@@ -789,8 +789,6 @@ static struct elevator_type mq_deadline = {
 		.init_sched		= dd_init_queue,
 		.exit_sched		= dd_exit_queue,
 	},
-
-	.uses_mq	= true,
 #ifdef CONFIG_BLK_DEBUG_FS
 	.queue_debugfs_attrs = deadline_queue_debugfs_attrs,
 #endif
