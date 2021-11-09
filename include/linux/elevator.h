@@ -77,9 +77,8 @@ struct elevator_type
 	struct kmem_cache *icq_cache;
 
 	/* fields provided by elevator implementation */
-	union {
-		struct elevator_mq_ops mq;
-	} ops;
+	struct elevator_mq_ops ops;
+
 	size_t icq_size;	/* see iocontext.h */
 	size_t icq_align;	/* ditto */
 	struct elv_fs_entry *elevator_attrs;
