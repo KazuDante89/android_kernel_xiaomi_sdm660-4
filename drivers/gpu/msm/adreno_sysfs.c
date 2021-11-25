@@ -64,7 +64,7 @@ static int _usesgmem_store(struct adreno_device *adreno_dev,
 {
 	struct adreno_preemption *preempt = &adreno_dev->preempt;
 
-	preempt->usesgmem = val ? 1 : 0;
+	preempt->usesgmem = val ? true : false;
 	return 0;
 }
 
@@ -80,7 +80,7 @@ static int _skipsaverestore_store(struct adreno_device *adreno_dev,
 {
 	struct adreno_preemption *preempt = &adreno_dev->preempt;
 
-	preempt->skipsaverestore = val ? 1 : 0;
+	preempt->skipsaverestore = val ? true : false;
 	return 0;
 }
 
@@ -145,7 +145,7 @@ _gpuhtw_llc_slice_enable_show(struct adreno_device *adreno_dev)
 static int _ft_long_ib_detect_store(struct adreno_device *adreno_dev,
 		unsigned int val)
 {
-	adreno_dev->long_ib_detect = val;
+	adreno_dev->long_ib_detect = val ? true : false;
 	return 0;
 }
 

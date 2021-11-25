@@ -121,7 +121,7 @@ int kgsl_busmon_get_dev_status(struct device *dev,
 			struct devfreq_dev_status *stat);
 int kgsl_busmon_get_cur_freq(struct device *dev, unsigned long *freq);
 
-#define KGSL_PWRSCALE_INIT(_priv_data) { \
+/*#define KGSL_PWRSCALE_INIT(_priv_data) { \
 	.enabled = true, \
 	.gpu_profile = { \
 		.private_data = _priv_data, \
@@ -140,5 +140,5 @@ int kgsl_busmon_get_cur_freq(struct device *dev, unsigned long *freq);
 	.history[KGSL_PWREVENT_STATE].size = 20, \
 	.history[KGSL_PWREVENT_GPU_FREQ].size = 3, \
 	.history[KGSL_PWREVENT_BUS_FREQ].size = 5, \
-	}
+	}*/
 #endif
